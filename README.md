@@ -1,1 +1,1 @@
-This repo contains my solutions for the OOP laboratory at my university.
+This repo contains my solution for the OOP laboratory.
