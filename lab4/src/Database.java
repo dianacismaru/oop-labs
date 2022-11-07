@@ -9,9 +9,11 @@ public class Database {
 
     private static Database database;
     private static int instanceCount = 0;
+
     private Database() {
         instanceCount++;
     }
+    
     public static Database getDatabase() {
         if (database == null)
             database = new Database();
