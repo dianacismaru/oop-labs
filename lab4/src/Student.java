@@ -46,12 +46,12 @@ public class Student {
     }
 
     public double averageGrade() {
-        int nrSubjects = subjects.size();
-        int sum = 0;
+        double nrSubjects = subjects.size();
+        double sum = 0;
         for (Map.Entry<String, Integer> entry: subjects.entrySet()) {
             sum += entry.getValue();
         }
-        return (double)sum / (double)nrSubjects;
+        return sum / nrSubjects;
     }
 
     public List<Teacher> getAllTeachers() {
