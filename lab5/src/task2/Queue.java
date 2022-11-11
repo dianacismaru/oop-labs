@@ -4,8 +4,8 @@ import task1.Task;
 
 import java.util.ArrayList;
 
-public class Queue implements Container {
-    private ArrayList<Task> queue = new ArrayList<>();
+public final class Queue implements Container {
+    private final ArrayList<Task> queue = new ArrayList<>();
 
     @Override
     public Task pop() {

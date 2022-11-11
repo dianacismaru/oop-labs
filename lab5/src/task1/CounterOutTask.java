@@ -1,6 +1,6 @@
 package task1;
 
-public class CounterOutTask implements Task {
+public final class CounterOutTask implements Task {
     private static int counter;
 
     @Override

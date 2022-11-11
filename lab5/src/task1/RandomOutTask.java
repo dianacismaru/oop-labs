@@ -2,9 +2,9 @@ package task1;
 
 import java.util.Random;
 
-public class RandomOutTask implements Task {
-    private int randomNumber;
-    private static Random random = new Random(12345);
+public final class RandomOutTask implements Task {
+    private final int randomNumber;
+    private static final Random random = new Random(12345);
 
     @Override
     public void execute() {

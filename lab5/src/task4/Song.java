@@ -1,6 +1,6 @@
 package task4;
 
-public class Song {
+public final class Song {
     private String name;
     private String composer;
     private int id;

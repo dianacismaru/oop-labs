@@ -1,6 +1,6 @@
 package task4;
 
-public class BadAlbum extends Album {
+public final class BadAlbum extends Album {
     @Override
     public void addSong(Song song) {
         if (song.getName().length() == 3 && isPalindrome(song.getId()))

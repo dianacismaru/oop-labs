@@ -1,6 +1,6 @@
 package task3;
 
-public class Operation implements Minus, Plus, Mult, Div {
+public final class Operation implements Minus, Plus, Mult, Div {
     private float value;
 
     public Operation(float value) {

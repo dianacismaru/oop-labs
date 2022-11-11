@@ -1,6 +1,6 @@
 package task4;
 
-public class DangerousAlbum extends Album {
+public final class DangerousAlbum extends Album {
     @Override
     public void addSong(Song song) {
         if (isPrime(song.getId()))

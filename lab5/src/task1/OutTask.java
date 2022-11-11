@@ -1,6 +1,6 @@
 package task1;
 
-public class OutTask implements Task {
+public final class OutTask implements Task {
     private final String message;
 
     @Override
