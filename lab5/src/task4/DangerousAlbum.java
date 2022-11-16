@@ -4,7 +4,7 @@ public final class DangerousAlbum extends Album {
     @Override
     public void addSong(Song song) {
         if (isPrime(song.getId()))
-           songs.add(song);
+           getSongs().add(song);
     }
 
     private boolean isPrime(int n) {

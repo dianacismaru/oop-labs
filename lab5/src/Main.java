@@ -20,7 +20,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int taskNum = scanner.nextInt();
 
-        // TODO UNCOMMENT BELLOW LINES TO TEST TASK 1 and TASK 2
         taskList = new Task[TASK_NO];
         taskList[0] = new OutTask("First message task");
         taskList[1] = new RandomOutTask();
@@ -32,15 +31,12 @@ public class Main {
 
         switch(taskNum) {
             case 1:
-                // TODO UNCOMMENT BELLOW LINES TO TEST TASK 1
                 for (Task task : taskList) {
                     task.execute();
                 }
                 break;
 
             case 2:
-                // TODO UNCOMMENT BELLOW LINES TO TEST TASK 2
-
                 System.out.println("----> Queue");
                 Queue q = new Queue();
                 for(Task task : taskList) {
@@ -76,7 +72,6 @@ public class Main {
                 break;
 
             case 3:
-                // TODO UNCOMMENT BELLOW LINES TO TEST TASK 3
                 Operation op = new Operation(13);
                 op.div(0);
                 op.div(1);
@@ -90,7 +85,6 @@ public class Main {
                 break;
 
             case 4:
-                // TODO UNCOMMENT BELLOW LINES TO TEST TASK 4
                 Song song1 = new Song("Bad", 101, "Michael Jackson");
                 Song song2 = new Song("Dangerous", 19, "Michael Jackson");
                 Song song3 = new Song("Heal the world", 53, "Composer");

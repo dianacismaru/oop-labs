@@ -4,7 +4,7 @@ public final class BadAlbum extends Album {
     @Override
     public void addSong(Song song) {
         if (song.getName().length() == 3 && isPalindrome(song.getId()))
-            songs.add(song);
+            getSongs().add(song);
     }
 
     private boolean isPalindrome(int n) {
