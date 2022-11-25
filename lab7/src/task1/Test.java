@@ -28,7 +28,7 @@ public class Test {
 
         // TODO uncomment this after implementing all the TextSegment subclasses
         /*textSegments.add(new PlainTextSegment("Mecanismul din spatele pattern-ului "));
-        textSegments.add(new ItalicTextSegment("Visitor"));
+        textSegments.add(new ItalicTextSegment("task1.Visitor"));
         textSegments.add(new PlainTextSegment(" poartă numele de "));
         textSegments.add(new BoldTextSegment("double-dispatch"));
         textSegments.add(new PlainTextSegment(".\n"));
@@ -36,7 +36,7 @@ public class Test {
                 "Tutorialul de double-dispatch"));
         textSegments.add(new PlainTextSegment(" oferă mai multe detalii legate de acest mecanism.\n"));
         textSegments.add(new PlainTextSegment("Pattern-ul "));
-        textSegments.add(new BoldTextSegment("Visitor"));
+        textSegments.add(new BoldTextSegment("task1.Visitor"));
         textSegments.add(new PlainTextSegment(" este util când se doreşte prelucrarea unei "));
         textSegments.add(new ItalicTextSegment("structuri complexe"));
         textSegments.add(new PlainTextSegment(", ce cuprinde mai multe "));
