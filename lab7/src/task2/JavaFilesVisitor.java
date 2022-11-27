@@ -18,15 +18,16 @@ public class JavaFilesVisitor extends SimpleFileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-        if (file.endsWith(".class") || file.endsWith(".java"))
+        if (file.toString().endsWith(".class") || file.toString().endsWith(".java")) {
             this.javaFiles.add(file);
+        }
 
         return super.visitFile(file, attrs);
     }
 
     public static void main(String[] args) {
 
-        Path startingDir = Paths.get("./src/lab7");
+        Path startingDir = Paths.get("./src/");
         JavaFilesVisitor filesVisitor = new JavaFilesVisitor();
 
         /*
