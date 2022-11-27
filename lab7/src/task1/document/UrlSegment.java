@@ -1,20 +1,14 @@
 package task1.document;
 
 public class UrlSegment extends TextSegment {
-    String url;
-    String description;
+    private final String description;
 
-    UrlSegment(String content) {
+    public UrlSegment(String content, String description) {
         super(content);
+        this.description = description;
     }
 
-    @Override
-    public void visit(TextSegment textSegment) {
-
-    }
-
-    @Override
-    public StringBuilder getDocument() {
-        return null;
+    public String getDescription() {
+        return description;
     }
 }

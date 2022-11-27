@@ -5,6 +5,7 @@ import task1.document.TextSegment;
 
 import java.util.ArrayList;
 import java.util.List;
+import task1.document.*;
 
 public class Test {
 
@@ -12,7 +13,7 @@ public class Test {
 
         List<TextSegment> textSegments = getTextSegments();
 
-        task1.WikiGenerator generator = new task1.WikiGenerator(textSegments);
+        WikiGenerator generator = new WikiGenerator(textSegments);
 
         System.out.println("----------------------Dokuwiki----------------------");
         System.out.println(generator.getDokuWikiDocument());
@@ -23,12 +24,12 @@ public class Test {
         // See what happens if the TextSegment's accept method is not abstract and the subclasses do not override it
         //  - testing this needs changes in the visitor interface as well
     }
+
     public static List<TextSegment> getTextSegments() {
         List<TextSegment> textSegments = new ArrayList<>();
 
-        // TODO uncomment this after implementing all the TextSegment subclasses
-        /*textSegments.add(new PlainTextSegment("Mecanismul din spatele pattern-ului "));
-        textSegments.add(new ItalicTextSegment("task1.Visitor"));
+        textSegments.add(new PlainTextSegment("Mecanismul din spatele pattern-ului "));
+        textSegments.add(new ItalicTextSegment("Visitor"));
         textSegments.add(new PlainTextSegment(" poartă numele de "));
         textSegments.add(new BoldTextSegment("double-dispatch"));
         textSegments.add(new PlainTextSegment(".\n"));
@@ -36,13 +37,13 @@ public class Test {
                 "Tutorialul de double-dispatch"));
         textSegments.add(new PlainTextSegment(" oferă mai multe detalii legate de acest mecanism.\n"));
         textSegments.add(new PlainTextSegment("Pattern-ul "));
-        textSegments.add(new BoldTextSegment("task1.Visitor"));
+        textSegments.add(new BoldTextSegment("Visitor"));
         textSegments.add(new PlainTextSegment(" este util când se doreşte prelucrarea unei "));
         textSegments.add(new ItalicTextSegment("structuri complexe"));
         textSegments.add(new PlainTextSegment(", ce cuprinde mai multe "));
         textSegments.add(new ItalicTextSegment("obiecte de tipuri diferite"));
         textSegments.add(new PlainTextSegment(".\n"));
-        */
+
         return textSegments;
     }
 }
