@@ -1,6 +1,6 @@
 package task1.document;
 
-public class UrlSegment extends TextSegment {
+public final class UrlSegment extends TextSegment {
     private final String description;
 
     public UrlSegment(String content, String description) {
@@ -8,7 +8,15 @@ public class UrlSegment extends TextSegment {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
+    @Override
+    public String getContent(DokuWikiVisitor visitor) {
+        return "[[" + super.getContent() +
+                "|" + description + "]]";
+    }
+
+    @Override
+    public String getContent(MarkdownVisitor visitor) {
+        return "[" + description + "]" +
+                "(" + super.getContent() + ")";
     }
 }

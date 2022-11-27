@@ -19,10 +19,6 @@ public class Test {
         System.out.println(generator.getDokuWikiDocument());
         System.out.println("---------------------MardownWiki--------------------");
         System.out.println(generator.getMarkdownDocument());
-
-        // TODO __AFTER__ the main functionality is working correctly
-        // See what happens if the TextSegment's accept method is not abstract and the subclasses do not override it
-        //  - testing this needs changes in the visitor interface as well
     }
 
     public static List<TextSegment> getTextSegments() {

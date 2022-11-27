@@ -10,11 +10,19 @@ public abstract class TextSegment implements Visitable {
         this.content = content;
     }
 
-    public void accept(DocumentVisitor v) {
-        v.visit(this);
+    public String accept(DocumentVisitor v) {
+        return v.visit(this);
     }
 
     public String getContent() {
         return content;
+    }
+
+    public String getContent(DokuWikiVisitor visitor) {
+        return this.getContent();
+    }
+
+    public String getContent(MarkdownVisitor visitor) {
+        return this.getContent();
     }
 }

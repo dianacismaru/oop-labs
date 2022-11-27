@@ -1,9 +1,9 @@
 package task1.document;
 
-public class DokuWikiVisitor implements DocumentVisitor {
+public final class DokuWikiVisitor implements DocumentVisitor {
     @Override
-    public void visit(TextSegment textSegment) {
-
+    public String visit(TextSegment textSegment) {
+        return textSegment.getContent(this);
     }
 
     @Override

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Uses visitors to parse documents and provide dokuwiki and markdown outputs.
  */
-public class WikiGenerator {
+public final class WikiGenerator {
 
     private final List<TextSegment> textSegments;
 
@@ -20,17 +20,21 @@ public class WikiGenerator {
 
     public StringBuilder getDokuWikiDocument() {
         DocumentVisitor visitor = new DokuWikiVisitor();
+        StringBuilder stringBuilder = new StringBuilder();
+
         for (TextSegment textSegment: textSegments) {
-            textSegment.accept(visitor);
+            stringBuilder.append(textSegment.accept(visitor));
         }
-        return null;
+        return stringBuilder;
     }
 
     public StringBuilder getMarkdownDocument() {
         DocumentVisitor visitor = new MarkdownVisitor();
+        StringBuilder stringBuilder = new StringBuilder();
+
         for (TextSegment textSegment: textSegments) {
-            textSegment.accept(visitor);
+            stringBuilder.append(textSegment.accept(visitor));
         }
-        return null;
+        return stringBuilder;
     }
 }
