@@ -1,4 +1,4 @@
-package lab10.commands;
+package lab10.task33.commands;
 
 /**
  * Interface for the commands used to create the diagram.

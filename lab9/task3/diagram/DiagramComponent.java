@@ -1,4 +1,4 @@
-package lab10.diagram;
+package lab10.task33.diagram;
 
 import java.util.ArrayList;
 import java.util.List;

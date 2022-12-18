@@ -1,4 +1,4 @@
-package lab10.observer;
+package lab10.task1;
 
 // Data stored by the DataRepository
 public class SensorData {

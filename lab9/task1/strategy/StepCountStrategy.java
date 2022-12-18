@@ -1,4 +1,4 @@
-package lab10.observer;
+package lab10.task1.strategy;
 
 /**
  * Defines the operations that can be performed on step data. Each implementation uses its own algorithm.

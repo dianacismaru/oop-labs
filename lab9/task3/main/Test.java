@@ -1,4 +1,4 @@
-package lab10.main;
+package lab10.task33.main;
 
 public class Test {
     public static void main(String[] args) {

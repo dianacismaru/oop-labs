@@ -1,4 +1,4 @@
-package lab10.observer;
+package lab10.task1;
 
 public class Utils {
     public static final String BASIC_STRATEGY = "basic";

@@ -1,4 +1,11 @@
-package lab10.observer;
+package lab10.task1;
+
+import lab10.task1.factory.StepCountStrategyFactory;
+import lab10.task1.observer.ConsoleLogger;
+import lab10.task1.observer.DataAggregator;
+import lab10.task1.observer.ServerCommunicationController;
+import lab10.task1.strategy.BasicStepCountStrategy;
+import lab10.task1.strategy.StepCountStrategy;
 
 import java.util.Scanner;
 
@@ -17,11 +24,16 @@ public final class Main {
                 dataRepository.attach(new ServerCommunicationController());
                 break;
             case 2:
-                // TODO: add two DataAggergator as Observers, with strategies provided by the
-                // TODO: StepCountStrategyFactory, based on the String inputs given below
                 String first_strategy_type = scanner.next();
                 String second_strategy_type = scanner.next();
 
+                StepCountStrategy firstStrategy = StepCountStrategyFactory
+                                                  .createStepCountStrategy(first_strategy_type, dataRepository);
+                StepCountStrategy secondStrategy = StepCountStrategyFactory
+                                                  .createStepCountStrategy(second_strategy_type, dataRepository);
+
+                dataRepository.attach(new DataAggregator(secondStrategy));
+                dataRepository.attach(new DataAggregator(firstStrategy));
                 break;
         }
 

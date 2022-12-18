@@ -1,4 +1,7 @@
-package lab10.observer;
+package lab10.task1;
+
+import lab10.task1.observer.Observer;
+import lab10.task1.observer.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,5 +30,9 @@ public final class DataRepository implements Subject {
         for (Observer observer: observers) {
             observer.update(dataRecord);
         }
+    }
+
+    public List<SensorData> getSensorDataList() {
+        return sensorDataList;
     }
 }

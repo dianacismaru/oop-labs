@@ -1,8 +1,6 @@
-package lab10.main;
+package lab10.task33.main;
 
-import lab10.commands.*;
-
-import java.util.LinkedList;
+import lab10.task33.commands.DrawCommand;
 
 /**
  * The layer between the client and the commands that need to be executed on the receivers (DiagramCanvas and DiagramComponent).

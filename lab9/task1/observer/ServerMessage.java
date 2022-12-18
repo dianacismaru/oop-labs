@@ -1,4 +1,4 @@
-package lab10.observer;
+package lab10.task1.observer;
 
 // Message sent by the ServerCommunicationController
 public class ServerMessage {

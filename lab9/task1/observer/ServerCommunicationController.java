@@ -1,4 +1,7 @@
-package lab10.observer;
+package lab10.task1.observer;
+
+import lab10.task1.SensorData;
+import lab10.task1.Utils;
 
 public class ServerCommunicationController implements Observer {
     @Override
