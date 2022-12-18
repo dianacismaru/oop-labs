@@ -1,4 +1,4 @@
-package lab10.task33.commands;
+package lab10.task3.commands;
 
 /**
  * Interface for the commands used to create the diagram.
@@ -7,5 +7,4 @@ package lab10.task33.commands;
  */
 public interface DrawCommand {
     void execute();
-    void undo();
 }

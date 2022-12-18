@@ -1,4 +1,4 @@
-package lab10.task33.diagram;
+package lab10.task3.diagram;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  *
  * It is the "receiver" of commands.
  */
-public class DiagramCanvas {
+public final class DiagramCanvas {
     private List<DiagramComponent> components = new ArrayList<>();
 
     public void addComponent(DiagramComponent diagramComponent) {

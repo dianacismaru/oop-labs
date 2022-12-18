@@ -1,31 +1,42 @@
-package lab10.task33.main;
+package lab10.task3.main;
 
-public class Test {
+import java.util.Scanner;
+
+public final class Test {
+    private static String spacerSymbols = new String(new char[40]).replace("\0", "-");
+
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int taskNum = scanner.nextInt();
+
         Client client = new Client();
 
-        // Execute various tests
+        switch(taskNum) {
+            case 1:
+                printOutputSpacerFor("testDraw");
+                testDraw(client);
 
-        testDraw(client);
-        System.out.println(new String(new char[80]).replace("\0", "-"));
+                printOutputSpacerFor("testTextAndColor");
+                testTextAndColor(client);
 
-        testTextAndColor(client);
-        System.out.println(new String(new char[80]).replace("\0", "-"));
+                printOutputSpacerFor("testResize");
+                testResize(client);
 
-        testResize(client);
-        System.out.println(new String(new char[80]).replace("\0", "-"));
+                printOutputSpacerFor("testConnect");
+                testConnect(client);
 
-        testConnect(client);
-        System.out.println(new String(new char[80]).replace("\0", "-"));
+                printOutputSpacerFor("testAllCommands");
+                testAllCommands(client);
 
-        testAllCommands(client);
-        System.out.println(new String(new char[80]).replace("\0", "-"));
+                break;
+            default:
+                System.out.println("Part 2 is not implemented");
+        }
 
-        testSimpleUndoRedo(client);
-        System.out.println(new String(new char[80]).replace("\0", "-"));
+    }
 
-        testComplexUndoRedo(client);
-        System.out.println(new String(new char[80]).replace("\0", "-"));
+    private static void printOutputSpacerFor(String test) {
+        System.out.println(spacerSymbols + test + spacerSymbols);
     }
 
     private static void testDraw(Client client) {
@@ -51,35 +62,35 @@ public class Test {
     }
 
     private static void testConnect(Client client) {
-        // TODO
+        testDraw(client);
+        client.executeAction("connect", "0", "1");
+        client.executeAction("connect", "3", "2");
+        client.executeAction("connect", "1", "4");
+        client.executeAction("draw rectangle");
+        client.showDiagram();
     }
 
     private static void testResize(Client client) {
-        // TODO
+        testDraw(client);
+        client.executeAction("resize", "0", "10");
+        client.executeAction("resize", "2", "50");
+        client.executeAction("resize", "4", "25");
+        client.showDiagram();
     }
 
     private static void testAllCommands(Client client) {
-        // TODO
-    }
-
-    private static void testSimpleUndoRedo(Client client) {
         client.newDiagram();
 
         client.executeAction("draw rectangle");
-        client.executeAction("change color", "0", "ORANGE");
-        client.showDiagram();
-
         client.executeAction("draw rectangle");
-        client.showDiagram();
+        client.executeAction("draw rectangle");
+        client.executeAction("resize", "0", "10");
+        client.executeAction("change color", "2", "PINK");
+        client.executeAction("connect", "2", "1");
+        client.executeAction("draw rectangle");
+        client.executeAction("change text", "1", "Class1");
+        client.executeAction("change text", "3", "Class2");
 
-        client.undo();
         client.showDiagram();
-
-        client.redo();
-        client.showDiagram();
-    }
-
-    private static void testComplexUndoRedo(Client client) {
-        // TODO
     }
 }

@@ -1,4 +1,4 @@
-package lab10.task33.commands;
+package lab10.task3.commands;
 
 /**
  * Supported commands

@@ -1,15 +1,13 @@
-package lab10.task33.main;
+package lab10.task3.main;
 
-import lab10.task33.commands.CommandType;
-import lab10.task33.commands.DrawCommand;
-import lab10.task33.diagram.DiagramCanvas;
-import
+import lab10.task3.diagram.DiagramCanvas;
+import lab10.task3.commands.*;
 
 /**
  * Receives commands in clear text from the user and transforms them in DrawCommand objects. It uses the Invoker to
  * execute the given commands.
  */
-public class Client {
+public final class Client {
 
     private Invoker invoker;
     private DiagramCanvas diagramCanvas;
@@ -20,11 +18,11 @@ public class Client {
     }
 
     public void showDiagram() {
-        // TODO
+        diagramCanvas.show();
     }
 
     public void newDiagram() {
-        // TODO
+        diagramCanvas = new DiagramCanvas();
     }
 
     public void executeAction(String commandName, String ...args) {
@@ -59,13 +57,5 @@ public class Client {
         } catch (NumberFormatException ex) {
             throw new IllegalArgumentException();
         }
-    }
-
-    public void undo(){
-        invoker.undo();
-    }
-
-    public void redo() {
-        invoker.redo();
     }
 }

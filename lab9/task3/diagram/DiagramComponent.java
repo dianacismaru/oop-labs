@@ -1,4 +1,4 @@
-package lab10.task33.diagram;
+package lab10.task3.diagram;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Represents a diagram object, currently just a rectangle with text and color that can be connected to other components.
  */
-public class DiagramComponent {
+public final class DiagramComponent {
     private String text = "text";
     private String color = "WHITE";
     private int height = 40;
