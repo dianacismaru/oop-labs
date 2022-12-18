@@ -2,7 +2,7 @@ package lab10.observer;
 
 import java.util.Scanner;
 
-public class Main {
+public final class Main {
     public static void main(String[] args) {
         DataRepository dataRepository = new DataRepository();
 
@@ -13,7 +13,8 @@ public class Main {
 
         switch (taskNum) {
             case 1:
-                // TODO: add one ConsoleLogger and one ServerCommunicationController instances as Observers
+                dataRepository.attach(new ConsoleLogger());
+                dataRepository.attach(new ServerCommunicationController());
                 break;
             case 2:
                 // TODO: add two DataAggergator as Observers, with strategies provided by the
