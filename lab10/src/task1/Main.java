@@ -40,7 +40,7 @@ public final class Main {
 
         final Teacher coolTeacher = new Teacher(
                 "Alex",
-                "Amazing task1.Teacher",
+                "Amazing Teacher",
                 Collections.singletonList("OOP"),
                 coolTeacherId);
 
